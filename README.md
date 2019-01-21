@@ -4,6 +4,8 @@ Uses Malay WordNet as dictionary.
 
 Algorithm returns approximately 78% accuracy.
 
+Firstly, run '''functions.py```
+
 To perform stemming on word 'pemberian' :
 > ``` malaystemmer('pemberian') ```
 
