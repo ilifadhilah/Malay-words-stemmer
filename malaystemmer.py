@@ -1,6 +1,7 @@
 
 from functions import replace_last, m_Prefix, p_Prefix, di_Prefix, ke_Prefix, ter_Prefix, ber_Prefix, Suffix, Verify
 
+#Main function to stem malay words
 def malaystemmer(text):
     if text[0] + text[1] == 'pe':
         stemmedword = p_Prefix(text)
