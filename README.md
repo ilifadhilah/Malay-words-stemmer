@@ -1,6 +1,6 @@
 # Malay-words-stemmer
-An algorithm designed to stem Bahasa Malaysia words based on the language's grammar properties. 
-Also uses Malay WordNet as dictionary
+An algorithm I designed during my internship to stem Bahasa Malaysia words based on the language's grammar properties. 
+Uses Malay WordNet as dictionary.
 
 Algorithm returns approximately 78% accuracy.
 
