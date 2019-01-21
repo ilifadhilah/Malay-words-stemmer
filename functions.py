@@ -1,7 +1,5 @@
-
-# coding: utf-8
-
-# In[2]:
+#initialize functions for prefixes and suffixes of malay
+#use malaysiawordnet.txt for malay dictionary
 
 import re
 import nltk
@@ -12,14 +10,12 @@ import pandas as pd
 
 malaywords = open("malaysiawordnet.txt").read().splitlines()
 vowels = ['a','e','i','o','u']
-# In[3]:
 
 def replace_last(source_string, replace_what, replace_with):
     head, _sep, tail = source_string.rpartition(replace_what)
     return head + replace_with + tail
 
 
-# In[14]:
 
 def m_Prefix(text):
     if (text[:6] =='memper'):
@@ -51,7 +47,7 @@ def m_Prefix(text):
     return Verify(temp, text)
 
 
-# In[5]:
+
 
 def p_Prefix(text):
     if (text[:4]  =='peny'):
@@ -77,14 +73,13 @@ def p_Prefix(text):
         stemmed = text[2:]
     else:
         stemmed = text
-    #per prefix eg pertolongan
+   
 
     temp = Suffix(stemmed)
     
     return Verify(temp, text)
 
 
-# In[6]:
 
 def di_Prefix(text):
     stemmed = text[2:]
@@ -116,7 +111,6 @@ def ber_Prefix(text):
     return Verify(temp, text) 
 
 
-# In[7]:
 
 def Suffix(stemmed):
     try:
@@ -138,8 +132,8 @@ def Suffix(stemmed):
     return temp
 
 
-# In[8]:
 
+#verify whether stemmed word exists in malay dictionary
 def Verify(temp, text):
     if (temp in malaywords and len(temp)>3):
         stemmed = temp
@@ -147,9 +141,5 @@ def Verify(temp, text):
         stemmed = text
         
     return stemmed
-
-
-# In[9]:
-
 
 
